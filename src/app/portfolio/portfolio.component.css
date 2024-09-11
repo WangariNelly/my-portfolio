@@ -125,10 +125,40 @@ header {
     animation: typing;
     animation-duration: 2s;
     animation-timing-function: steps(100, end);
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
   }
 
   @keyframes typing {
     from { width: 0 }
     to { width: 100% }
+  }
+
+  @media screen and (max-width: 768px) {
+    header {
+      min-height: auto;
+    }
+  
+    .top-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .photo {
+      width: 250px;
+    }
+  
+    nav ul {
+      align-items: center;
+      display: flex;
+    justify-content: space-between;
+    margin: 0;
+    }
+  
+    nav a {
+      margin: 1rem 7rem;
+    }
+  
+    p {
+      font-size: 14px;
+    }
   }
